@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:crypto/controllers/Currency.dart';
 import 'package:get/get.dart';
-import 'package:collection/collection.dart';
 
 class CurrencyController extends GetxController {
   var _currencyList = <Currency>[
@@ -39,18 +38,16 @@ class CurrencyController extends GetxController {
   void updateIsAdded(List<String> currenciesNames) {
     List<Currency> newList = [];
 
-    _currencyList.forEach((currency) {
+    for (var currency in _currencyList) {
       if (currenciesNames.contains(currency.name)) {
         currency.isAdded = true;
-        print('add is added');
       } else {
         currency.isAdded = false;
       }
       newList.add(currency);
-    });
+    }
     _currencyList.clear();
     _currencyList.value = newList;
     update();
-    inspect(_currencyList);
   }
 }

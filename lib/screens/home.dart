@@ -18,7 +18,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    print('data length ${data.length}');
     var space = MediaQuery.of(context).size.height * 0.03;
     return Container(
       decoration: const BoxDecoration(
@@ -126,7 +125,7 @@ class _HomeState extends State<Home> {
                       itemCount: currencyController.actifCurrencies.length + 1,
                       itemBuilder: (context, index) {
                         return index == 0
-                            ? AddNewCurrencyBox()
+                            ? const AddNewCurrencyBox()
                             : CurrencyBox(
                                 currency: currencyController
                                     .actifCurrencies[index - 1],

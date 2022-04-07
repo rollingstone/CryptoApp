@@ -28,8 +28,7 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     Page2(),
@@ -63,14 +62,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(9),
               ),
-              margin: EdgeInsets.only(left: 50),
+              margin: const EdgeInsets.only(left: 50),
               child: Image.asset('assets/icons/Home.png'),
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color:
                     _selectedIndex == 1 ? Color(0xff273E7D) : Color(0xffffff),
@@ -82,14 +81,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color:
                     _selectedIndex == 2 ? Color(0xff273E7D) : Color(0xffffff),
                 borderRadius: BorderRadius.circular(9),
               ),
-              margin: EdgeInsets.only(right: 50),
-              child: Image.asset('assets/icons/profile.png'),
+              margin: const EdgeInsets.only(right: 50),
+              child: Image.asset('assets/icons/Profile.png'),
             ),
             label: '',
           ),
