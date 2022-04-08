@@ -5,22 +5,22 @@ class CurrencyController extends GetxController {
   final _currencyList = <Currency>[
     Currency(
         name: 'Bitcoin',
-        rate: 39861.80,
+        rate: 1255606.80,
         logoUrl:
             'https://res.cloudinary.com/dxo0jqzkk/image/upload/c_scale,h_100/v1649323929/bitcoin.png'),
     Currency(
         name: 'Ethereum',
-        rate: 39861.80,
+        rate: 96405.80,
         logoUrl:
             'https://res.cloudinary.com/dxo0jqzkk/image/upload/c_scale,h_100/v1649343886/Ethereum.png'),
     Currency(
         name: 'Tether',
-        rate: 39861.80,
+        rate: 656046.80,
         logoUrl:
             'https://res.cloudinary.com/dxo0jqzkk/image/upload/c_scale,h_100/v1649343986/Tether.png'),
     Currency(
         name: 'Solana',
-        rate: 39861.80,
+        rate: 656205.80,
         logoUrl:
             'https://res.cloudinary.com/dxo0jqzkk/image/upload/c_scale,h_100/v1649344046/solana.png'),
   ].obs;

@@ -1,5 +1,6 @@
 import 'package:crypto/controllers/currency.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class CurrencyBox extends StatefulWidget {
   final Currency currency;
@@ -18,6 +19,7 @@ class CurrencyBox extends StatefulWidget {
 }
 
 class _CurrencyBoxState extends State<CurrencyBox> {
+  final formatter = NumberFormat("###,###,###.0#", "en_US");
   var isSelected = false;
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class _CurrencyBoxState extends State<CurrencyBox> {
                     width: 5,
                   ),
                   Text(
-                    currency.rate.toString(),
+                    formatter.format(currency.rate).toString(),
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -105,7 +107,7 @@ class _CurrencyBoxState extends State<CurrencyBox> {
                               width: 5,
                             ),
                             Text(
-                              currency.rate.toString(),
+                              formatter.format(currency.rate).toString(),
                               style: const TextStyle(
                                   color: Color(0xff192879),
                                   fontWeight: FontWeight.bold),

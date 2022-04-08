@@ -4,6 +4,7 @@ import 'package:crypto/widgets/add_new-currency_box.dart';
 import 'package:crypto/widgets/currency_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,6 +19,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var formatter = NumberFormat("###,###,###.0#", "en_US");
+
     var space = MediaQuery.of(context).size.height * 0.03;
     final cardBottomPadding = MediaQuery.of(context).size.height * 0.125;
     return Container(
@@ -77,8 +80,8 @@ class _HomeState extends State<Home> {
                                     fontWeight: FontWeight.w200,
                                     fontSize: 35)),
                           ),
-                          const Text('14.200.122',
-                              style: TextStyle(
+                          Text(formatter.format(14200.122).toString(),
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 35,
@@ -108,7 +111,7 @@ class _HomeState extends State<Home> {
                               color: Color.fromARGB(255, 189, 189, 189),
                               fontWeight: FontWeight.w400,
                               fontSize: 18)),
-                      const Text('12.200',
+                      Text(formatter.format(12200),
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
