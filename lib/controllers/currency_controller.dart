@@ -7,7 +7,7 @@ class CurrencyController extends GetxController {
         name: 'Bitcoin',
         rate: 39861.80,
         logoUrl:
-            'https://res.cloudinary.com/dxo0jqzkk/image/upload/v1649323929/bitcoin.png'),
+            'https://res.cloudinary.com/dxo0jqzkk/image/upload/c_scale,h_100/v1649323929/bitcoin.png'),
     Currency(
         name: 'Ethereum',
         rate: 39861.80,
