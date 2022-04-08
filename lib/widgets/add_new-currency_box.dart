@@ -25,10 +25,12 @@ class _AddNewCurrencyBoxState extends State<AddNewCurrencyBox> {
 
   @override
   Widget build(BuildContext context) {
+    final cardMargin = MediaQuery.of(context).size.height * 0.125;
+
     return GestureDetector(
       child: Container(
-        margin:
-            const EdgeInsets.only(top: 120, bottom: 120, left: 15, right: 15),
+        margin: EdgeInsets.only(
+            top: cardMargin, bottom: cardMargin, left: 15, right: 15),
         padding: const EdgeInsets.only(left: 10, right: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(9),

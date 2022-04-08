@@ -1,11 +1,14 @@
-import 'package:crypto/controllers/currency_controller.dart';
+import 'package:crypto/controllers/bindings.dart';
 import 'package:crypto/screens/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/services.dart';
 
 void main() {
-  Get.put(CurrencyController());
-
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  ControllerBindings().dependencies();
   runApp(const MyApp());
 }
 
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Crypto Demo',
       home: const MainPage(),
       theme: ThemeData(
