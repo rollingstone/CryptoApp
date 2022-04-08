@@ -112,7 +112,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.w400,
                               fontSize: 18)),
                       Text(formatter.format(12200),
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 25)),
