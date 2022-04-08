@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Currency {
   String name;
   double rate;

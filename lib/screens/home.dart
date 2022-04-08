@@ -1,7 +1,7 @@
-import 'package:crypto/controllers/Currency.dart';
+import 'package:crypto/controllers/currency.dart';
 import 'package:crypto/controllers/currency_controller.dart';
-import 'package:crypto/widgets/AddNewCurrencyBox.dart';
-import 'package:crypto/widgets/CurrencyBox.dart';
+import 'package:crypto/widgets/add_new-currency_box.dart';
+import 'package:crypto/widgets/currency_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -79,9 +79,10 @@ class _HomeState extends State<Home> {
                             ),
                             const Text('14.200.122',
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 35))
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 35,
+                                ))
                           ],
                         ),
                         SizedBox(

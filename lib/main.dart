@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Crypto Demo',
       home: const MainPage(),
       theme: ThemeData(
-        // Add the 5 lines from here...
+        fontFamily: 'OpenSans',
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,

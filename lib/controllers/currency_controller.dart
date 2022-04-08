@@ -1,10 +1,8 @@
-import 'dart:developer';
-
-import 'package:crypto/controllers/Currency.dart';
+import 'package:crypto/controllers/currency.dart';
 import 'package:get/get.dart';
 
 class CurrencyController extends GetxController {
-  var _currencyList = <Currency>[
+  final _currencyList = <Currency>[
     Currency(
         name: 'Bitcoin',
         rate: 39861.80,

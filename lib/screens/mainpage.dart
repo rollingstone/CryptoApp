@@ -71,8 +71,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color:
-                    _selectedIndex == 1 ? Color(0xff273E7D) : Color(0xffffff),
+                color: _selectedIndex == 1
+                    ? const Color(0xff273E7D)
+                    : Colors.transparent,
                 borderRadius: BorderRadius.circular(9),
               ),
               child: Image.asset('assets/icons/Activity.png'),
@@ -83,8 +84,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color:
-                    _selectedIndex == 2 ? Color(0xff273E7D) : Color(0xffffff),
+                color: _selectedIndex == 2
+                    ? const Color(0xff273E7D)
+                    : Colors.transparent,
                 borderRadius: BorderRadius.circular(9),
               ),
               margin: const EdgeInsets.only(right: 50),
